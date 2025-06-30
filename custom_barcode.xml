@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.journeyapps.barcodescanner.BarcodeView
+        android:id="@+id/zxing_barcode_surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Scanning Frame -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Scanning Area Overlay -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/scan_overlay" />
+
+        <!-- Scanning Frame -->
+        <FrameLayout
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true">
+
+            <!-- Corner Indicators -->
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="top|start"
+                android:src="@drawable/ic_corner_top_left"
+                android:tint="@color/scan_frame_color" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="top|end"
+                android:src="@drawable/ic_corner_top_right"
+                android:tint="@color/scan_frame_color" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="bottom|start"
+                android:src="@drawable/ic_corner_bottom_left"
+                android:tint="@color/scan_frame_color" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="bottom|end"
+                android:src="@drawable/ic_corner_bottom_right"
+                android:tint="@color/scan_frame_color" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</merge>
